@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<h1 id="btnHousing"  onclick="btnColor('btnHousing','red');" >Red</h1>
+<h1 id="btnHousing1"  onclick="btnColor('btnHousing1','green');" >Green</h1>
+<h1 id="btnHousing2" onclick="btnColor('btnHousing2','blue');" >Blue</h1>
+
+
+<script type="text/javascript">
+function btnColor(btn, color) {
+var property = document.getElementById(btn);
+    if (property.className !== 'toggled') {
+        property.style.backgroundColor=color;
+        property.className = 'toggled'
+    }
+    else {
+        property.style.backgroundColor = "white";
+        property.className = '';
+    }
+}
+
+</script>
+</html>

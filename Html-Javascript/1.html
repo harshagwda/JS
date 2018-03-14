@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Form Example</title>
+<script LANGUAGE="JavaScript" type="text/javascript">
+
+function validateForm() {
+    var x = document.forms["form1"]["email"].value;
+    var x = document.forms["form1"]["fname"].value;
+     var x = document.forms["form1"]["lname"].value;
+      var x = document.forms["form1"]["address"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    document.getElementById("form1").innerHTML= x;
+}
+function display() {
+  message = "<ul><li><b>Email: </b>" + document.form1.email.value;
+  message += "<li><b>FirstName: </b>" + document.form1.fname.value;
+  message += "<li><b>LastName: </b>" + document.form1.fname.value;
+  message += "<li><b>ADDRESS: </b>" + document.form1.fname.value;
+  document.getElementById("test").innerHTML = message;
+  document.getElementById("form").style.visibility = "hidden";
+}
+
+</script>
+</head>
+<body>
+
+<form name="form1" id ="form">
+
+<b>Email:</b> <input TYPE="TEXT" SIZE="20" NAME="email">
+
+<b>FirstName:</b> <input TYPE="TEXT" SIZE="20" NAME="fname">
+
+<b>LastName:</b> <input TYPE="TEXT" SIZE="20" NAME="lname">
+
+<b>Address:</b> <input TYPE="TEXT" SIZE="30" NAME="address">
+
+<input TYPE="BUTTON" VALUE="Display" onClick="display(); validateForm();">
+</form>
+<div id ="test">
+
+</div>
+</body>
+</html>
