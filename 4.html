@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.background === "red") {
+        x.style.background = "white"
+    } else {
+        x.style.background = "none";
+    }
+}
+</script>
+</head>
+
+<div id="myid1">
+<h2><a href="#" onclick="changeColor1('myid1'); return false;">GREEN</a></h2>
+</div>
+<div id="myid2">
+<h2><a href="#" onclick="changeColor2('myid2'); return false;">BLUE</a></h2>
+</div>
+</html>

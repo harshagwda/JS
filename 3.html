@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function changeColor(id)
+{
+  document.getElementById(id).style.color = "#ff0000"; 
+  document.getElementById(id).style.backgroundColor = "#ff0000";
+}
+function changeColor1(id)
+{
+  document.getElementById(id).style.color = "#00ff00"; 
+  document.getElementById(id).style.backgroundColor = "#00ff00";
+}
+function changeColor2(id)
+{
+  document.getElementById(id).style.color = "#0000ff"; 
+  document.getElementById(id).style.backgroundColor = "#0000ff";
+}
+</script>
+</head>
+<div id="myid">
+<h2><a href="#" onclick="changeColor('myid'); return false;">RED</a></h2>
+</div>
+<div id="myid1">
+<h2><a href="#" onclick="changeColor1('myid1'); return false;">GREEN</a></h2>
+</div>
+<div id="myid2">
+<h2><a href="#" onclick="changeColor2('myid2'); return false;">BLUE</a></h2>
+</div>
+</html>
