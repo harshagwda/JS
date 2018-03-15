@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/jq2html.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	$("#colred").click(function(){
+		$('#colred').toggleClass("red");
+		})
+})
+    $(document).ready(function(){
+	$("#colred1").click(function(){
+		$('#colred1').toggleClass("green");
+		})
+})
+     $(document).ready(function(){
+	$("#colred2").click(function(){
+		$('#colred2').toggleClass("blue");
+		})
+})   
+</script>
+</head>
+<body>
+<p id="colred" style="font-size:30px">Red</p>
+<p id="colred1" style="font-size:30px">Green</p>
+<p id="colred2" style="font-size:30px">Blue</p>
+</body>
+</html>
