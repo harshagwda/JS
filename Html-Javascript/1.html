@@ -1,46 +1,50 @@
 <html>
 <head>
-<title>Form Example</title>
-<script LANGUAGE="JavaScript" type="text/javascript">
+  <title>Form Example</title>
+  <link rel="stylesheet" type="text/css" href="1html.css">
+  <script LANGUAGE="JavaScript" type="text/javascript">
 
-function validateForm() {
-    var x = document.forms["form1"]["email"].value;
-    var x = document.forms["form1"]["fname"].value;
-     var x = document.forms["form1"]["lname"].value;
-      var x = document.forms["form1"]["address"].value;
-    if (x == "") {
-        alert("Name must be filled out");
+    function validateForm() {
+      var x = document.forms["form1"]["email"].value;
+      var y = document.forms["form1"]["fname"].value;
+      var z = document.forms["form1"]["lname"].value;
+      var a = document.forms["form1"]["address"].value;
+      if (x == "" || y == "" || z == "" || a == "") {
+        alert("All fields are mandatory!");
         return false;
-    }
-    document.getElementById("form1").innerHTML= x;
-}
-function display() {
-  message = "<ul><li><b>Email: </b>" + document.form1.email.value;
-  message += "<li><b>FirstName: </b>" + document.form1.fname.value;
-  message += "<li><b>LastName: </b>" + document.form1.fname.value;
-  message += "<li><b>ADDRESS: </b>" + document.form1.fname.value;
-  document.getElementById("test").innerHTML = message;
-  document.getElementById("form").style.visibility = "hidden";
-}
+      }
+      else 
+      {
+        display()
+      }
 
-</script>
+    }
+    function display() {
+      message = "<h2>Email:</h2><br>" + document.form1.email.value;
+      message += "<h2>FirstName:</h2><br>" + document.form1.fname.value;
+      message += "<h2>LastName:</h2><br>" + document.form1.lname.value;
+      message += "<h2>ADDRESS:</h2><br>" + document.form1.address.value;
+      document.getElementById("test").innerHTML = message;
+      document.getElementById("form").style.visibility = "hidden";
+    }
+
+  </script>
 </head>
 <body>
+  <form name="form1" id ="form">
 
-<form name="form1" id ="form">
+    <input TYPE="TEXT" SIZE="20" NAME="email" placeholder="E-mail"><br>
 
-<b>Email:</b> <input TYPE="TEXT" SIZE="20" NAME="email">
+    <input TYPE="TEXT" SIZE="20" NAME="fname" placeholder="First Name"><br>
 
-<b>FirstName:</b> <input TYPE="TEXT" SIZE="20" NAME="fname">
+    <input TYPE="TEXT" SIZE="20" NAME="lname" placeholder="Last Name"><br>
 
-<b>LastName:</b> <input TYPE="TEXT" SIZE="20" NAME="lname">
+    <textarea TYPE="TEXT" SIZE="30" NAME="address" placeholder="Address"></textarea><br>
 
-<b>Address:</b> <input TYPE="TEXT" SIZE="30" NAME="address">
+    <input TYPE="BUTTON" VALUE="Submit" onclick="validateForm();">
+  </form>
+  <div id ="test">
 
-<input TYPE="BUTTON" VALUE="Display" onClick="display(); validateForm();">
-</form>
-<div id ="test">
-
-</div>
+  </div>
 </body>
 </html>
