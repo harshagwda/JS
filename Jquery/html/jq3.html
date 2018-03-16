@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Form Example</title>
+    <head>
+    <script type='text/javascript'  src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+    </head>
+<script>
+    function validateForm() {
+      
+      var x = $('.email').val();
+      var y = $('.fname').val();
+      var z = $('.lname').val();
+      var a = $('.address').val();
+      if (x == "" || y == "" || z == "" || a == "") {
+        alert("All fields are mandatory!");
+        return false;
+      }
+      else
+      {
+      message = "<h2>Email:</h2><br>" + $('.email').val();
+      message += "<h2>FirstName:</h2><br>" + $('.fname').val();
+      message += "<h2>LastName:</h2><br>" + $('.lname').val();
+      message += "<h2>ADDRESS:</h2><br>" + $('.address').val();
+      $('#test').html(message);
+      $('#form').hide();
+      }
+
+    }
+    
+    
+
+  </script>
+</head>
+<body>
+  <form name="form1" id ="form">
+
+    <input TYPE="TEXT" SIZE="20" NAME="email" class= "email" placeholder="E-mail"><br>
+
+    <input TYPE="TEXT" SIZE="20" NAME="fname" class= "fname" placeholder="First Name"><br>
+
+    <input TYPE="TEXT" SIZE="20" NAME="lname" class= "lname" placeholder="Last Name"><br>
+
+    <textarea TYPE="TEXT" SIZE="30" NAME="address"  class= "address" placeholder="Address"></textarea><br>
+
+    <input TYPE="BUTTON" VALUE="Submit" onclick="validateForm();">
+  </form>
+  <div id ="test">
+
+  </div>
+</body>
+</html>
